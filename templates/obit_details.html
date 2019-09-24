@@ -1,0 +1,30 @@
+    {% extends 'base.html' %}
+        {% block head %}
+            <title>
+            lastevent - Home
+            </title>
+         {% endblock %}
+{% block nav-button %}
+{%  if user.username %}
+ <li class="nav-item"><a href="/logged" class="nav-link" id="link-1">{{ user.username }}</a></li>
+{% else %}
+<li class="nav-item"><a href="/account/login" class="nav-link" id="link-1">Zaloguj</a></li>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+    <h4> Szczegóły nekrologu:</h4>
+    <p>Imię: {{ obit.first_name }}</p>
+    <p>Nazwisko: {{ obit.last_name }}</p>
+    <p>Urodzony: {{ obit.born_date }}</p>
+    <p>Zmarł: {{ obit.death_date }}</p>
+    <br>
+    <h6>O pogrzebie:</h6>
+    <p>Cmentarz: {{ obit.cemetery_name }}</p>
+    <p>Adres cmentarza: {{ obit.cemetery_address }}</p>
+    <p>Kościół: {{ obit.church_name }}</p>
+    <p>Adres kościoła: {{ obit.church_address }}</p>
+    <br>
+    <p>Dodatkowe informacje: {{ obit.description }}</p>
+
+{% endblock %}

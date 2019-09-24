@@ -1,0 +1,22 @@
+    {% extends 'base.html' %}
+        {% block head %}
+            <title>
+            lastevent - Home
+            </title>
+         {% endblock %}
+{% block nav-button %}
+{%  if user %}
+ <li class="nav-item"><a href="/logged" class="nav-link" id="link-1">{{ user.username }}</a></li>
+{% else %}
+<li class="nav-item"><a href="/account/login" class="nav-link" id="link-1">Zaloguj</a></li>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if user %}
+        <h4>Witaj {{ user.username }} </h4>
+    {% else %}
+    <h4>Nie jesteś zalogowany!</h4>
+    {% endif %}
+
+{% endblock %}

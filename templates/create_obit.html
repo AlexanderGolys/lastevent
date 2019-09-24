@@ -1,0 +1,20 @@
+    {% extends 'base.html' %}
+        {% block head %}
+            <title>
+            lastevent - Home
+            </title>
+         {% endblock %}
+
+{% block nav-button %} <li class="nav-item"><a href="/logged" class="nav-link" id="link-1">{{ user.username }}</a></li> {% endblock %}
+
+
+
+    {% block content %}
+        <h1>Dodaj nekrolog</h1>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <button type="submit">Dodaj</button>
+
+        </form>
+    {% endblock %}
