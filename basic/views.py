@@ -3,7 +3,6 @@ from .forms import ObitForm
 from .models import Obit
 
 
-
 def home(request):
     return render(request, 'home.html')
 
@@ -41,3 +40,11 @@ def obit_detail(request, id):
 
 def my_account(request):
     return render(request, 'my_account.html')
+
+
+def comp_details(request):
+    return render(request, 'comp_details.html')
+
+
+def comp_list(request):
+    return render(request, 'comp_list.html')

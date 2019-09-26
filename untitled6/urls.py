@@ -13,4 +13,5 @@ urlpatterns = [
     path('obit/<int:id>', views.obit_detail, name='obits details'),
     path('my_account/', views.my_account, name="my account"),
     path('comp/<int:id>', views.comp_details, name="comp details"),
+    path('comp_list', views.comp_list, name="comp list"),
 ]
