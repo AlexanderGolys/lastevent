@@ -14,7 +14,7 @@ SECRET_KEY = 'q8#r=b-$_*8-6_-!--9-65-luvcp6c-uaizsgj)ti6b7==tbj9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILE_SERVING_ROOT = os.path.join(BASE_DIR, 'public')
