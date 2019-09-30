@@ -110,7 +110,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/lastevent/static/'
 STATIC_ROOT = os.path.join(FILE_SERVING_ROOT, 'auto_collected/')
 AUTH_USER_MODEL = "basic.Funeral"
 LOGIN_REDIRECT_URL = '/logged'
