@@ -16,6 +16,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FILE_SERVING_ROOT = os.path.join(BASE_DIR, 'public')
 
 # Application definition
 
@@ -109,6 +111,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(FILE_SERVING_ROOT, 'auto_collected/')
 AUTH_USER_MODEL = "basic.Funeral"
 LOGIN_REDIRECT_URL = '/logged'
 
